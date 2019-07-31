@@ -4,9 +4,9 @@
 # master-thesis
 ### Code used for analyze soil moisture properties 
 
-## Step 1: Download radolan precipitation data from dwd ftp server
-  ### Modules needed: pyftpdlib, os
+## Step 1 (download_radolan): Download radolan precipitation data from dwd ftp server
+  ### Modules needed: pyftpdlib, os, tarfile 
   ### To get it work change working dir folders in script
-  ### To-Do:
-  ### SOLVED!!! check if file is implementet but check if file is working not! ->https://tecadmin.net/python-check-file-directory-exists/
+  ### How it works: Go to ftp folder of DWD precipitation data; Check if file is already on drive and if file is not corrupted skip downloading otherwise download the file
+  
    
