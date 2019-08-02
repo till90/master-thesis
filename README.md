@@ -16,8 +16,7 @@
             - some archives have bin.gz they have to be also untared/ziped/gized
             
 ## Step 3 (wradlib): make readable raster data from .bin data
-  ### Modules needed:
-  ### How it works: 
-  ###To-Do: 
+  ### Modules needed: wradlib, numpy
+  ### How it works: Load .bin data from Step 2; georeference with radolan projection and german grid (900 x 900) and reproject it to WGS 84 Mercator?? (EPSG 3857); save it as Gtif
   
    
