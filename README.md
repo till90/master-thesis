@@ -24,6 +24,9 @@
 ## Step 4 (upload_gee_2): Upload data from local drive -> GCS Bucket -> GEE
   ### Modules needed: Mainly work with command line 
   ### How it works: See https://www.tucson.ars.ag.gov/notebooks/uploading_data_2_gee.html#
+  
+# Landcover concept
+## Soil moisture observations over crop- and bare soil maybe valid. Forest, build-up, water and urban
 
 # Products
 ## Soil 
@@ -34,7 +37,9 @@
 #### GLDAS-2.1: Global Land Data Assimilation System / 2000 - Present / ground based  /sm 10-200cm / air temp 27-28 km / https://developers.google.com/earth-engine/datasets/catalog/NASA_GLDAS_V021_NOAH_G025_T3H
 #### Copernicus CORINE Land Cover / 1986 - 2012
 ## Landcover
+### Corine Land Cover / 10-100m https://land.copernicus.eu/pan-european/corine-land-cover
 ### earth engine
+#### Copernicus CORINE Land Cover / 86 - 2012 / 100m / https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_CORINE_V18_5_1_100m
 #### Global PALSAR-2/PALSAR Forest/Non-Forest Map / 2007 - 2018 / 25 m / f, nf, water / https://developers.google.com/earth-engine/datasets/catalog/JAXA_ALOS_PALSAR_YEARLY_FNF
 #### MCD12Q1.006 MODIS Land Cover Type Yearly Global / 2001 - 2017 / 500m / Landcover / https://developers.google.com/earth-engine/datasets/catalog/MODIS_051_MCD12Q1
 #### MCD12Q1.051 Land Cover Type Yearly Global / 2000 - present / 500m / Landcover / https://developers.google.com/earth-engine/datasets/catalog/MODIS_051_MCD12Q1
