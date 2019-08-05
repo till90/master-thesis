@@ -26,9 +26,15 @@
   ### How it works: See https://www.tucson.ars.ag.gov/notebooks/uploading_data_2_gee.html#
   
 # Landcover concept
-## Soil moisture observations over crop- and bare soil maybe valid. Forest, build-up, water and urban
+## Soil moisture observations over crop- and bare soil maybe valid. Forest, build-up/urban or water seems to be invalid because of high scattering effects and poor quality SAR data. 
+
+## First Try: DE GM(500m) / Corine Landcover 100m / radolan 1km/  Boden Übersichtskarte BGR 2km / 
 
 # Products
+open data deutschland - http://de.digital-geography.com/open-data-deutschland-freie-geodaten-von-bund-und-landern/ 
+## Boundarys
+### earth engine
+#### international countrie borders / table-featurecollection / https://developers.google.com/earth-engine/datasets/catalog/USDOS_LSIB_2013
 ## Soil 
 ### WMS
 #### BÜK 200 / https://services.bgr.de/wms/boden/buek200/? / https://www.bgr.bund.de/DE/Themen/Boden/Informationsgrundlagen/Bodenkundliche_Karten_Datenbanken/BUEK200/buek200_node.html
