@@ -27,7 +27,9 @@
 ### Step 4 (upload_gee_2): Upload data from local drive -> GCS Bucket -> GEE
    Modules needed: Mainly work with command line 
    How it works: See https://www.tucson.ars.ag.gov/notebooks/uploading_data_2_gee.html#
- 
+## AOI
+   Hessisches Ried Das Hessische Ried umfasst die Hessische Rheinebene und den hessischen Teil der Nördlichen Oberrheinniederung (naturräumliche Einheiten 225 und 222) https://de.wikipedia.org/wiki/Hessisches_Ried
+   
 ## Bare-Soil detection
    Remote Sensing (GEE): 
    Soil Indizes: https://www.indexdatabase.de/db/ia.php?application_id=2
@@ -55,11 +57,15 @@ open data deutschland - http://de.digital-geography.com/open-data-deutschland-fr
  GLDAS-2.1: Global Land Data Assimilation System / 2000 - Present / ground based  /sm 10-200cm / air temp 27-28 km / https://developers.google.com/earth-engine/datasets/catalog/NASA_GLDAS_V021_NOAH_G025_T3H
  Copernicus CORINE Land Cover / 1986 - 2012
 ## Landcover
- Corine Land Cover / 10-100m https://land.copernicus.eu/pan-european/corine-land-cover/view
+ Corine Land Cover / 10-100m https://land.copernicus.eu/pan-european/corine-land-cover/view WMS: http://sg.geodatenzentrum.de/wms_clc10_2012
 ### earth engine
  Copernicus CORINE Land Cover / 86 - 2012 / 100m / https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_CORINE_V18_5_1_100m
  Global PALSAR-2/PALSAR Forest/Non-Forest Map / 2007 - 2018 / 25 m / f, nf, water / https://developers.google.com/earth-engine/datasets/catalog/JAXA_ALOS_PALSAR_YEARLY_FNF
  MCD12Q1.006 MODIS Land Cover Type Yearly Global / 2001 - 2017 / 500m / Landcover / https://developers.google.com/earth-engine/datasets/catalog/MODIS_051_MCD12Q1
  MCD12Q1.051 Land Cover Type Yearly Global / 2000 - present / 500m / Landcover / https://developers.google.com/earth-engine/datasets/catalog/MODIS_051_MCD12Q1
  GFSAD1000: Cropland Extent 1km Crop Dominance, Global Food-Support Analysis Data / 2000 - present / 1km / Cropland - global irrigated and rainfed cropland area map / https://developers.google.com/earth-engine/datasets/catalog/USGS_GFSAD1000_V0
+
+Resources
+Open Data - Freie Daten und Dienste des BKG http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=0&gdz_user_id=0
+Umweltatlas Hessen: http://atlas.umwelt.hessen.de/atlas/haupt.htm
 
