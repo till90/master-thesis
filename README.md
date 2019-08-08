@@ -21,6 +21,9 @@
 ### Step 3 (wradlib): make readable raster data from .bin data
    Modules needed: wradlib, numpy
    How it works: Load .bin data from Step 2; georeference with radolan projection and german grid (900 x 900) and reproject it to WGS 84 Mercator?? (EPSG 3857); save it as Gtif
+   Irgendwo ist ein Fehler aufgetreten die reporjezierten Tifs gehen jetzt teilweise bis nach Finnland
+   Das pdf vom DWD nochmal anschauen indem beschrieben wird wie mit gdal gewarpt oder repojeziert wird
+   bis dahin einfach die heavy_rainfall analysis nutzten und hier einfügen 
 
 #### Notes on Step 2 and 3: Some problems with doubled tared filez, in total script only solves 2013-2019 with some extra work outside the scripts. For 2006-2013 untar problem accures
 
