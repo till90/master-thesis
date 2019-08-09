@@ -11,13 +11,12 @@
    Modules needed: pyftpdlib, os, tarfile 
    To get it work change working dir folders in script
    How it works: Go to ftp folder of DWD precipitation data; Check if file is already on drive and if file is not corrupted skip downloading otherwise download the file
+   To-Do: To do Step2 download all files inside one folder
 
 ### Step 2 (unzip_radolan_tar):Unpack radolan data tar.gz -> .bin
    Modules needed: tarfile, os
-   How it works: Try to untar all files in same folder or try to untar only specific files out of a tar file
-   To-Do:
-            - some archives have bin.gz they have to be also untared/ziped/gized
-            
+   How it works: Use second part of the script. All files must be in the same folder, better when no other files except the      .tar.gz files are inside the folder. Extract all files inside the tar archive with the corresponding time variable inside the same folder
+          
 ### Step 3 (wradlib): make readable raster data from .bin data
    Modules needed: wradlib, numpy
    How it works: Load .bin data from Step 2; georeference with radolan projection and german grid (900 x 900) and reproject it to WGS 84 Mercator?? (EPSG 3857); save it as Gtif
