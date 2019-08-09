@@ -17,9 +17,9 @@
    Modules needed: tarfile, os
    How it works: Use second part of the script. All files must be in the same folder, better when no other files except the      .tar.gz files are inside the folder. Extract all files inside the tar archive with the corresponding time variable inside the same folder
           
-### Step 3 (wradlib): make readable raster data from .bin data
-   Modules needed: wradlib, numpy
-   How it works: Load .bin data from Step 2; georeference with radolan projection and german grid (900 x 900) and reproject it to WGS 84 Mercator?? (EPSG 3857); save it as Gtif
+### Step 3 (wradlib_warps_translate): make readable raster data from .bin data
+   Modules needed: wradlib, numpy, osgeo
+   How it works: Use third part of the script for all files located in single folder... Load .bin data from Step 2; georeference with radolan projection and german grid (900 x 900) and reproject it to GK3 and save it as Gtif
    Irgendwo ist ein Fehler aufgetreten die reporjezierten Tifs gehen jetzt teilweise bis nach Finnland
    Das pdf vom DWD nochmal anschauen indem beschrieben wird wie mit gdal gewarpt oder repojeziert wird
    bis dahin einfach die heavy_rainfall analysis nutzten und hier einfügen 
