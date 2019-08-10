@@ -30,6 +30,7 @@
    Modules needed: Mainly work with command line 
    How it works: See https://www.tucson.ars.ag.gov/notebooks/uploading_data_2_gee.html#
    Save transferbuckettogee.sh in folder with .tif files to get date property set and run it with "source ransferbuckettogee.sh"
+   Problem: you have to run earthengine create collection bla/bla/bla and remove it in script because of a / at the end of $imcol the command isn't valid but is necessary for script solution: new $variable
    In case you have to delete collections inside GEE look at https://developers.google.com/earth-engine/command_line
 ## AOI
    Hessisches Ried Das Hessische Ried umfasst die Hessische Rheinebene und den hessischen Teil der Nördlichen Oberrheinniederung (naturräumliche Einheiten 225 und 222) https://de.wikipedia.org/wiki/Hessisches_Ried
