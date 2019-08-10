@@ -3,6 +3,19 @@
 
 # master-thesis
  Find mysterious soil property corresponding to soil-moisture behaviours 
+ Properties affecting soil moisture:
+ 1. Soil type
+ 2. Organic content
+ 3. Precipitation (check: Radolan 1000m)
+ 4. Vegetation (check: CLC 100m, Bare-soil condition through classification with indizes 10m)
+ 5. Altitude (check strm 30 30m)
+ 6. Sun radiation
+ 7. Cloudcover (check: sentinel 1, 10m)
+ 8. Soil temperature
+ 9. Air temperature
+ 10. Evaporation / Evapotranspiration
+ 11. Wind relation
+ 12. ?
  Needed data: Precipitation, Bare-Soil, Soil-Moisture, Evapotranspiration/Evaporation, 
 
 
