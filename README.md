@@ -56,6 +56,12 @@
 ## Soil-Moisture estimation
    Ground Trouth campain: DIY moisture sticks 
    Remote Sensing (GEE): 
+
+## Soil-Map Hessisches Ried  
+   Go-To http://bodenviewer.hessen.de/mapapps/resources/apps/bodenviewer/index.html?lang=de
+   Make screenshots for AOI ; maybe later script this part  
+   Autosticht for stich process https://www.heise.de/download/product/autostitch-27347/download  
+   Python Script cluster_images nutzen um durch kmeans die Karte wiederherstellen
    
 ## Landcover concept
  Soil moisture observations over crop- and bare soil maybe valid. Forest, build-up/urban or water seems to be invalid because of high scattering effects and poor quality SAR data. 
