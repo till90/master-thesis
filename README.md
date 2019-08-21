@@ -21,32 +21,30 @@
 
 ## Precipitation 
 ### Step 1 (download_radolan): Download radolan precipitation data from dwd ftp server
-   Modules needed: pyftpdlib, os, tarfile 
-   To get it work change working dir folders in script
-   How it works: Go to ftp folder of DWD precipitation data; Check if file is already on drive and if file is not corrupted skip downloading otherwise download the file
-   To-Do: To do Step2 download all files inside one folder
+   Modules needed: pyftpdlib, os, tarfile   
+   To get it work change working dir folders in script  
+   How it works: Go to ftp folder of DWD precipitation data; Check if file is already on drive and if file is not corrupted skip downloading otherwise download the file  
+   To-Do: To do Step2 download all files inside one folder  
 
 ### Step 2 (unzip_radolan_tar):Unpack radolan data tar.gz -> .bin
-   Modules needed: tarfile, os
-   How it works: Use second part of the script. All files must be in the same folder, better when no other files except the      .tar.gz files are inside the folder. Extract all files inside the tar archive with the corresponding time variable inside the same folder
+   Modules needed: tarfile, os  
+   How it works: Use second part of the script. All files must be in the same folder, better when no other files except the      .tar.gz files are inside the folder. Extract all files inside the tar archive with the corresponding time     variable inside the same folder  
           
 ### Step 3 (wradlib_warps_translate): make readable raster data from .bin data
-   Modules needed: wradlib, numpy, osgeo
-   How it works: Use third part of the script for all files located in single folder... Load .bin data from Step 2; georeference with radolan projection and german grid (900 x 900) and reproject it to GK3 and save it as Gtif
-   Irgendwo ist ein Fehler aufgetreten die reporjezierten Tifs gehen jetzt teilweise bis nach Finnland
-   Das pdf vom DWD nochmal anschauen indem beschrieben wird wie mit gdal gewarpt oder repojeziert wird
-   bis dahin einfach die heavy_rainfall analysis nutzten und hier einfügen 
+   Modules needed: wradlib, numpy, osgeo  
+   How it works: Use part of the script where all files located in single folder and creating osr objects is inside the for loop... Load .bin data from Step 2;   georeference with radolan projection and german grid (900 x 900) and reproject it to GK3 and save it as Gtif      
 
-#### Notes on Step 2 and 3: Some problems with doubled tared filez, in total script only solves 2013-2019 with some extra work outside the scripts. For 2006-2013 untar problem accures
+#### Notes on Step 2 and 3: Some problems with doubled tared filez, in total script only solves 2009-2019 with some extra work outside the scripts. For 2006-2013 untar problem accures
 
 ### Step 4 (upload_gee_2): Upload data from local drive -> GCS Bucket -> GEE
-   Modules needed: Mainly work with command line 
-   How it works: See https://www.tucson.ars.ag.gov/notebooks/uploading_data_2_gee.html#
-   Save transferbuckettogee.sh in folder with .tif files to get date property set and run it with "source ransferbuckettogee.sh"
-   Problem: you have to run earthengine create collection bla/bla/bla and remove it in script because of a / at the end of $imcol the command isn't valid but is necessary for script solution: new $variable
-   In case you have to delete collections inside GEE look at https://developers.google.com/earth-engine/command_line
+   Modules needed: Mainly work with command line  
+   How it works: See https://www.tucson.ars.ag.gov/notebooks/uploading_data_2_gee.html#    
+   Save transferbuckettogee.sh in folder with .tif files to get date property set and run it with "source ransferbuckettogee.sh"  
+   Problem: you have to run earthengine create collection bla/bla/bla and remove it in script because of a / at the end of $imcol the command isn't valid but is necessary for script solution: new $variable  
+   In case you have to delete collections inside GEE look at https://developers.google.com/earth-engine/command_line  
+   
 ## AOI
-   Hessisches Ried Das Hessische Ried umfasst die Hessische Rheinebene und den hessischen Teil der Nördlichen Oberrheinniederung (naturräumliche Einheiten 225 und 222) https://de.wikipedia.org/wiki/Hessisches_Ried
+   Hessisches Ried Das Hessische Ried umfasst die Hessische Rheinebene und den hessischen Teil der Nördlichen Oberrheinniederung (naturräumliche Einheiten 225 und 222) https://de.wikipedia.org/wiki/Hessisches_Ried  
    
 ## Bare-Soil detection
    Remote Sensing (GEE): 
@@ -64,9 +62,9 @@
    Python Script cluster_images nutzen um durch kmeans die Karte wiederherstellen
    
 ## Landcover concept
- Soil moisture observations over crop- and bare soil maybe valid. Forest, build-up/urban or water seems to be invalid because of high scattering effects and poor quality SAR data. 
+ Soil moisture observations over crop- and bare soil maybe valid. Forest, build-up/urban or water seems to be invalid   because of high scattering effects and poor quality SAR data.   
 
- First Try: DE GM(500m) / Corine Landcover 100m / radolan 1km/  Boden Übersichtskarte BGR 2km / 
+ First Try: DE GM(500m) / Corine Landcover 100m / radolan 1km/  Boden Übersichtskarte BGR 2km /   
 
 # Products
 open data deutschland - http://de.digital-geography.com/open-data-deutschland-freie-geodaten-von-bund-und-landern/ 
