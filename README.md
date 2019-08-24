@@ -32,7 +32,7 @@
           
 ### Step 3 (wradlib_warps_translate): make readable raster data from .bin data
    Modules needed: wradlib, numpy, osgeo  
-   How it works: Use part of the script where all files located in single folder and creating osr objects is inside the for loop... Load .bin data from Step 2;   georeference with radolan projection and german grid (900 x 900) and reproject it to GK3 and save it as Gtif      
+   How it works: Use part of the script where all files located in single folder and creating osr objects is inside the for loop... Load .bin data from Step 2;   georeference with radolan projection and german grid (900 x 900) and reproject it to GK3 and save it as Gtif. Doesent work in Gee it is deprojected i don't know why? But the radolan stereo projection works for now so take this      
 
 #### Notes on Step 2 and 3: Some problems with doubled tared filez, in total script only solves 2009-2019 with some extra work outside the scripts. For 2006-2013 untar problem accures
 
@@ -42,6 +42,10 @@
    Save transferbuckettogee.sh in folder with .tif files to get date property set and run it with "source ransferbuckettogee.sh"  
    Problem: you have to run earthengine create collection bla/bla/bla and remove it in script because of a / at the end of $imcol the command isn't valid but is necessary for script solution: new $variable  
    In case you have to delete collections inside GEE look at https://developers.google.com/earth-engine/command_line  
+
+### Step 5 Get Soil Map  
+   Source:  http://bodenviewer.hessen.de/mapapps/resources/apps/bodenviewer/index.html?lang=de  
+   How it works: Make a screenshot with no background information. Go to arcmap or qgis and georeference the image. save it as tiff. Than use cluster_images.py to classify image with kmeans   
    
 ## AOI
    Hessisches Ried Das Hessische Ried umfasst die Hessische Rheinebene und den hessischen Teil der Nördlichen Oberrheinniederung (naturräumliche Einheiten 225 und 222) https://de.wikipedia.org/wiki/Hessisches_Ried  
