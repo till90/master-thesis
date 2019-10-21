@@ -1,6 +1,3 @@
-# Jupyter Notebook with Miniconda
-### Its only in Anaconda full installation, with miniconda use conda install jupyter
-
 # master-thesis
  Find mysterious soil property corresponding to soil-moisture behaviours 
  Properties affecting soil moisture:
@@ -17,7 +14,6 @@
  11. Wind relation
  12. ?
  Needed data: Precipitation, Bare-Soil, Soil-Moisture, Evapotranspiration/Evaporation, 
-
 
 ## Precipitation 
 ### Step 1 (download_radolan): Download radolan precipitation data from dwd ftp server
@@ -43,7 +39,12 @@
    Problem: you have to run earthengine create collection bla/bla/bla and remove it in script because of a / at the end of $imcol the command isn't valid but is necessary for script solution: new $variable  
    In case you have to delete collections inside GEE look at https://developers.google.com/earth-engine/command_line  
 
-### Step 5 Get Soil Map  
+## Evapotranspiration potential + relative (Evapotranspiration_p_r_workflow)
+Step 1 download data  
+Step 2 transform from .asc to .tif
+Step 3 Upload to Gcloud and transfer it to GEE (same way as radolan data)
+
+## Get Soil Map  
    Source:  http://bodenviewer.hessen.de/mapapps/resources/apps/bodenviewer/index.html?lang=de  
    How it works: Make a screenshot with no background information. Go to arcmap or qgis and georeference the image. save it as tiff. Than use cluster_images.py to classify image with kmeans   
    
